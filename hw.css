@@ -1,0 +1,21 @@
+header {
+	padding: 30px 30px 40px;
+	background-color: #f7e017;
+	margin-bottom: 30px;
+}
+
+header h1 {
+	margin-top: 0;
+}
+
+h1 {
+	font-size: 38px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.school-name {
+	font-size: 20px;
+	font-weight: 600;
+	color: #bba800;
+}
