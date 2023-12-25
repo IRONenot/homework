@@ -43,7 +43,7 @@ age = null;
 console.log(age);
 
 // Оператор typeof
-let someName = "James";
+userName = "James";
 console.log(typeof someName);
 
 // =================== 3. Операторы сравнения и условия =================== //
@@ -71,7 +71,7 @@ if (условие){
     // Код который будет выполнен если условие НЕ верно
 }
 */
-const time = 12;
+let time = 12;
 if (time < 12) {
   console.log("Доброе утро");
 } else if (time >= 12 && time < 18) {
@@ -98,28 +98,28 @@ if (10 < 12) {
 10 < 12 ? console.log("Условие верно") : console.log("Условие НЕ верно"); //Тернарный оператор
 
 let greeting;
-let time1 = 10;
+time = 10;
 
-if (time1 < 12) {
+if (time < 12) {
   greeting = "Доброе утро";
 } else {
   greeting = "Добрый день";
 }
 console.log(greeting);
 
-greeting = time1 < 12 ? "Доброе утро" : "Добрый день";
+greeting = time < 12 ? "Доброе утро" : "Добрый день";
 console.log(greeting); //Тернарный оператор
 
 // ======== 4. Конкатенация строк и шаблонные строки =========
 
 console.log("Привет, Марк! ");
 
-let greeting1 = "Привет, Марк!";
+greeting = "Привет, Марк!";
 let howAreYou = "Как твои дела?";
-let sayHi = greeting1 + howAreYou;
+let sayHi = greeting + howAreYou;
 
-const userName_1 = "Марк";
-console.log("Привет, " + userName_1 + "! Как твои дела?");
+userName = "Марк";
+console.log("Привет, " + userName + "! Как твои дела?");
 
 // шаблонные строки
 console.log(`Привет, ${userName_1}! Как твои дела?`);
@@ -146,7 +146,7 @@ sayHi("Dan");
 
 function summ(a, b) {
   const reesult = a + b;
-  console.log(reesult);
+  console.log(result);
 }
 summ(2, 3);
 
@@ -159,7 +159,7 @@ console.log(res);
 
 // =================== 5.3 Функция как аргумент ===================
 
-function summ(a,b) {
+function summ(a, b) {
     return a + b
 }
 
@@ -208,6 +208,68 @@ arrSayHi('Sasha')
 
 const summ = (a, b) => a + b;
 
-const res_1 = summ(10,15)
-console.log(res_1)
+res = summ(10,15)
+console.log(res)
 
+// =================== 6. Массивы ===================
+
+const autoBrand1 = "Audi";
+const autoBrand2 = "BMW";
+const autoBrand3 = "Mazda";
+const autoBrand4 = "Toyota";
+
+const autoBrands = ["Audi", "BMW", "Mazda", "Toyota"];
+//console.log(autoBrands);
+console.log(autoBrands[0]);
+console.log(autoBrands[1]);
+console.log(autoBrands[2]);
+
+console.log(autoBrands.length); // длинна массива, кол-во элементов
+
+// =================== 7. Методы массивов ===================
+
+// .push(), .pop(), shift(), unshift(), .splice(), .slice(), .forEach(), .indexOf(), .includes()  ...
+
+/*
+arr.push(...items) – Добавить элемент в конец массива
+arr.pop() – Удалить элемент из конца массива
+arr.shift() – Удалить элемент из начала массива
+arr.unshift(...items) – Добавить элемент в начало массива
+arr.splice([start]], [deleteCount, newElements])
+*/
+
+autoBrands.push('Nissan');
+console.log(autoBrands);
+
+autoBrands.splice(2, 1);
+console.log(autoBrands);
+
+// Методы массивов - это тема для отдельного урока
+
+// =================== 7. Циклы ===================
+
+ for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+// =================== 7. Обход массива циклом for ===================
+
+console.log(autoBrands[0]);
+console.log(autoBrands[1]);
+console.log(autoBrands[2]);
+
+for (let i = 0; i < autoBrands.length; i++) {
+	autoBrands[i];
+}
+
+//=================== 7. Обход массива циклом for ( of ) ===================
+
+for (let item of autoBrands) {
+	console.log(item);
+}
+
+// =================== 8. Обход массива методом forEach() ===================
+
+autoBrands.forEach(function (item) {
+	console.log(item);
+});
